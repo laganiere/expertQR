@@ -1,6 +1,8 @@
 /**
- * This file contains material supporting the course SEG2505: Introduction to Software 
- * Engineering at the University of Ottawa.
+ * This file contains material supporting the course
+ * SEG2505: Introduction to Software Engineering
+ * University of Ottawa.
+ * http://wwww.eecs.uottawa.ca/~laganier
  *
  * This program is free software; permission is hereby granted to use, copy, modify,
  * and distribute this source code, or portions thereof, for any purpose, without fee,
@@ -10,6 +12,9 @@
  * In particular, the software is not guaranteed to be fault-tolerant or free from failure.
  * The author disclaims all warranties with regard to this software, any use,
  * and any consequent failure, is purely the responsibility of the user.
+ *
+ * Hanna Farah 2014
+ * Robert Laganiere 2015
  */
 package ca.uottawa.eecs.seg2505.expertqr;
 
@@ -45,7 +50,7 @@ public class ExpertiseActivity extends AppCompatActivity {
 	
 	private void updateUI() {
 		List<Expertise> expertises = Delegateur.getInstance().getExpertiseControlleur().getListeExpertises();
-		ArrayAdapter<Expertise> adapter = new ArrayAdapter<Expertise>(this,
+		ArrayAdapter<Expertise> adapter = new ArrayAdapter<>(this,
     			android.R.layout.simple_spinner_item, expertises);
     	spinnerChoixExpertise.setAdapter(adapter);
 

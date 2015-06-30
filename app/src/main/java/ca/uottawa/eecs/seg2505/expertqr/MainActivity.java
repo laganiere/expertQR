@@ -77,4 +77,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ExpertiseActivity.class);
         startActivity(intent);
     }
+
+    public void onPoserQuestion(View view) {
+        Intent intent = new Intent(this, PoserQuestionActivity.class);
+        startActivity(intent);
+    }
 }

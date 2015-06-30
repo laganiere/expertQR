@@ -78,17 +78,25 @@ public class Delegateur {
         Expert expert= new Expert(expertise);
         utilisateurCourant.setRoleExpert(expert);
 
-        expertiseControlleur = new ExpertiseControlleur(dbFacade);
+		expertiseControlleur = new ExpertiseControlleur(dbFacade);
+		questionControlleur = new QuestionControlleur(dbFacade);
 	}
 
     public Utilisateur getUtilisateurCourant() {
 
         return utilisateurCourant;
     }
-	// afin d'obtenir Expertise Controlleur
+
+	// afin d'obtenir le controlleur d'Expertises
 	public ExpertiseControlleur getExpertiseControlleur() {
 
 		return expertiseControlleur;
+	}
+
+	// afin d'obtenir le controlleur de Questions
+	public QuestionControlleur getQuestionControlleur() {
+
+		return questionControlleur;
 	}
 
 }
