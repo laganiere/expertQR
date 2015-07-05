@@ -49,6 +49,7 @@ public class Reponse implements Serializable {
 	public Reponse(Question question) {
 
         this.question = question;
+		question.setReponse(this);
 		this.ID = UUID.randomUUID().toString();
 	}
 	
@@ -120,9 +121,10 @@ public class Reponse implements Serializable {
 	 * @return La question a laquelle on repond
 	 */
 	public Question getQuestion() {
+
 		return question;
 	}
-	
+
 	/**
 	 * @return Le ID de la question a laquelle on repond
 	 */

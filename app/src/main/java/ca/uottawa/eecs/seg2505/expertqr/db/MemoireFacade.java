@@ -47,10 +47,10 @@ public class MemoireFacade implements DBFacade {
 	@Override
 	public List<Question> getQuestionsPourExpertise(String expertise) {
 		List<Question> resultat = new ArrayList<Question>();
+		// obtenir les questions non-repondues pour l'expert
 		for (Question quest : questions) {
-			if (quest.getExpertiseRequise() != null
-					&& quest.getExpertiseRequise().getTexte() != null
-					&& quest.getExpertiseRequise().getTexte().equals(expertise)) {
+			if (quest.getExpertiseRequise().getTexte().equals(expertise) &&
+					quest.getReponse()==null) {
 				resultat.add(quest);
 			}
 		}

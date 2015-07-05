@@ -25,7 +25,7 @@
     <string name="title_activity_repondre_question">RepondreQuestionActivity</string>
     <string name="title_activity_lire_evaluer">LireEvaluerActivity</string>
     <string name="title_activity_expertise">ExpertiseActivity</string>
-    <string name="label_pas_de_question">Aucune question pour ton expertise!</string>
+    <string name="label_pas_de_question">Aucune question pour votre expertise!</string>
     <string name="label_pas_de_reponse">*Pas de reponse pour le moment*</string>
     <string name="label_erreur_evaluation_numerique">L\'evaluation doit etre une valeur numerique entiere.</string>
     <string name="label_pour_expert">Expert:</string>

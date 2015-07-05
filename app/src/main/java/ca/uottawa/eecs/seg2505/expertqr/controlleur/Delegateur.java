@@ -80,6 +80,7 @@ public class Delegateur {
 
 		expertiseControlleur = new ExpertiseControlleur(dbFacade);
 		questionControlleur = new QuestionControlleur(dbFacade);
+		reponseControlleur = new ReponseControlleur(dbFacade);
 	}
 
     public Utilisateur getUtilisateurCourant() {
@@ -97,6 +98,12 @@ public class Delegateur {
 	public QuestionControlleur getQuestionControlleur() {
 
 		return questionControlleur;
+	}
+
+	// afin d'obtenir le controlleur de Reponses
+	public ReponseControlleur getReponseControlleur() {
+
+		return reponseControlleur;
 	}
 
 }

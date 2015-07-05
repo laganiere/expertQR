@@ -24,6 +24,10 @@
             android:name=".PoserQuestionActivity"
             android:label="@string/title_activity_poser_question" >
         </activity>
+        <activity
+            android:name=".RepondreQuestionActivity"
+            android:label="@string/title_activity_repondre_question" >
+        </activity>
     </application>
 
 </manifest>

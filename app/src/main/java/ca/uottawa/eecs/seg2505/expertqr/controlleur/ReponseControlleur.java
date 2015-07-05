@@ -29,10 +29,21 @@ public class ReponseControlleur {
 	public ReponseControlleur(DBFacade dbFacade) {
 		this.dbFacade = dbFacade;
 	}
-	
+
 	/**
-	 * Methode pour sauvegarder une Reponse
-	 * @param reponse
+	 * Methode pour ajouter une Reponse
+	 * @param texte le texte de la reponse
+	 */
+public Reponse ajouterReponse(Question question,String texte) {
+		Reponse reponse = new Reponse(question);
+		reponse.setTexte(texte);
+		reponse.setExpertID(Delegateur.getInstance().getUtilisateurCourant().getNom());
+
+		return reponse;
+	}
+
+	/**
+	 * Methode pour sauvegarder une Question avec sa Reponse
 	 */
 	public void sauvegardeReponse(Reponse reponse) {
 		if (reponse != null
@@ -43,7 +54,7 @@ public class ReponseControlleur {
 			dbFacade.sauvegardeReponse(reponse);
 		}
 	}
-	
+
 	public Reponse getReponsePourQuestion(Question question) {
 		Reponse reponse = null;
 		

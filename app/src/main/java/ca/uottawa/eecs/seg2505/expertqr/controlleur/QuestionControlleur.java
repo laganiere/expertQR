@@ -32,7 +32,20 @@ public class QuestionControlleur {
 	public QuestionControlleur(DBFacade dbFacade) {
 		this.dbFacade = dbFacade;
 	}
-	
+
+	/**
+	 * Methode pour creer une Question
+	 * @param texte le texte de la question
+	 */
+	public Question creerQuestion(String texte, Expertise expertise) {
+
+		Question question = new Question();
+		question.setTexte(texte);
+		question.setExpertiseRequise(expertise);
+		question.setUtilisateurID(Delegateur.getInstance().getUtilisateurCourant().getNom());
+
+		return question;
+	}
 	/**
 	 * Methode pour sauvegarder une Question
 	 * @param question

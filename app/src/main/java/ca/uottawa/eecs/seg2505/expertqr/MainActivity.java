@@ -82,4 +82,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, PoserQuestionActivity.class);
         startActivity(intent);
     }
+
+    public void onRepondreQuestion(View view) {
+        Intent intent = new Intent(this, RepondreQuestionActivity.class);
+        startActivity(intent);
+    }
+
 }
