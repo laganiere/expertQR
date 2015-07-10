@@ -72,13 +72,13 @@ public class QuestionControlleur {
 		return listeQuestions;
 	}
 	
-	public List<Question> getQuestionsPourUtilisateur(Utilisateur utilisateur) {
+	public List<Question> getQuestions(Utilisateur utilisateur) {
 		List<Question> listeQuestions = null;
 		
 		if (utilisateur != null
 				&& utilisateur.getNom() != null
 				&& !utilisateur.getNom().isEmpty()) {
-			listeQuestions = dbFacade.getQuestionsPourUtilisateur(utilisateur.getNom());
+			listeQuestions = dbFacade.getQuestions(utilisateur.getNom());
 		}
 		 
 		return listeQuestions;

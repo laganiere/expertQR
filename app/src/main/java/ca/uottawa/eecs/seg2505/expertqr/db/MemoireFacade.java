@@ -31,7 +31,6 @@ public class MemoireFacade implements DBFacade {
 	// garder tous les donnees en memoire
 	protected List<Question> questions = new ArrayList<Question>();
 	protected List<Expertise> expertises = new ArrayList<Expertise>();
-	protected List<Reponse> reponses = new ArrayList<Reponse>();
 	protected List<Utilisateur> utilisateurs = new ArrayList<Utilisateur>();
 
 	public MemoireFacade() {
@@ -58,7 +57,7 @@ public class MemoireFacade implements DBFacade {
 	}
 
 	@Override
-	public List<Question> getQuestionsPourUtilisateur(String nom) {
+	public List<Question> getQuestions(String nom) {
 		List<Question> resultat = new ArrayList<Question>();
 		for (Question quest : questions) {
 			if (quest.getUtilisateurID() != null
@@ -76,36 +75,37 @@ public class MemoireFacade implements DBFacade {
 				return quest.getReponse();
 			}
 		}
-		for (Reponse rep : reponses) {
-			if (rep.getQuestion().getID().equals(questionID)) {
-				return rep;
-			}
-		}
+
 		return null;
 	}
 	
 	@Override
 	public List<Expertise> getListeExpertises() {
+
 		return expertises;
 	}
 
 	@Override
 	public void sauvegardeQuestion(Question question) {
+
 		questions.add(question);
 	}
 
 	@Override
 	public void sauvegardeReponse(Reponse reponse) {
-		reponses.add(reponse);
+
+		return;
 	}
 
 	@Override
 	public void sauvegardeUtilisateur(Utilisateur utilisateur) {
+
 		utilisateurs.add(utilisateur);
 	}
 
 	@Override
 	public void ajouterExpertise(Expertise expertise) {
+
 		expertises.add(expertise);
 	}
 

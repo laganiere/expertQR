@@ -37,7 +37,7 @@ public interface DBFacade {
 	 * @param nom Le nom de l'utilisateur
 	 * @return Une liste de questions qui est demandee par cet utilisateur.
 	 */
-	public List<Question> getQuestionsPourUtilisateur(String nom);
+	public List<Question> getQuestions(String nom);
 	
 	/**
 	 * @param questionID Le ID d'une question

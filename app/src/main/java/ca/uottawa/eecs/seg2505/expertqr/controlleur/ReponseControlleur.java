@@ -34,7 +34,7 @@ public class ReponseControlleur {
 	 * Methode pour ajouter une Reponse
 	 * @param texte le texte de la reponse
 	 */
-public Reponse ajouterReponse(Question question,String texte) {
+    public Reponse ajouterReponse(Question question,String texte) {
 		Reponse reponse = new Reponse(question);
 		reponse.setTexte(texte);
 		reponse.setExpertID(Delegateur.getInstance().getUtilisateurCourant().getNom());

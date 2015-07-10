@@ -88,4 +88,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void OnLireEvaluerReponse(View view) {
+        Intent intent = new Intent(this, LireEvaluerActivity.class);
+        startActivity(intent);
+    }
 }

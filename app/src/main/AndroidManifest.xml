@@ -28,6 +28,10 @@
             android:name=".RepondreQuestionActivity"
             android:label="@string/title_activity_repondre_question" >
         </activity>
+        <activity
+            android:name=".LireEvaluerActivity"
+            android:label="@string/label_lire_evaluer_reponse" >
+        </activity>
     </application>
 
 </manifest>
